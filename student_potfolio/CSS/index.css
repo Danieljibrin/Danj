@@ -1,0 +1,207 @@
+/* --- RESET & BASE (Same for all pages) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f7fc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #3498db;
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+/* --- NAVIGATION (Same for all pages) --- */
+header {
+    background: #2c3e50;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #34495e;
+    transform: translateY(-2px);
+}
+
+nav a.active {
+    background: #3498db;
+}
+
+/* --- FOOTER (Same for all pages) --- */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+
+/* --- HOME PAGE SPECIFIC --- */
+.hero {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    border: 4px solid #3498db;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #3498db;
+    font-weight: 600;
+}
+
+/* --- PERFECT TEXT JUSTIFICATION FOR WELCOME MESSAGE --- */
+.welcome-message {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 1rem auto 0;
+    color: #555;
+    /* TEXT JUSTIFICATION - FORMS A 90-DEGREE WALL */
+    text-align: justify;
+    text-justify: inter-word;
+    /* Ensures the last line aligns to the left */
+    text-align-last: left;
+    /* For better spacing and readability */
+    word-spacing: 0.5px;
+    letter-spacing: 0.3px;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+}
+
+/* --- PERFECT TEXT JUSTIFICATION FOR BIO SECTION --- */
+.bio {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.bio p {
+    /* TEXT JUSTIFICATION - FORMS A 90-DEGREE WALL */
+    text-align: justify;
+    text-justify: inter-word;
+    /* Ensures the last line aligns to the left */
+    text-align-last: left;
+    /* For better spacing and readability */
+    word-spacing: 0.5px;
+    letter-spacing: 0.3px;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* Alternative: If you want the heading in bio to remain centered */
+.bio h2 {
+    text-align: left;
+    text-align-last: left;
+}
+
+/* --- RESPONSIVE (Same for all pages) --- */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        padding: 0 1rem;
+        margin: 1rem auto;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .hero {
+        padding: 1.5rem;
+    }
+
+    .bio {
+        padding: 1.5rem;
+    }
+    
+    /* Maintain justification on mobile */
+    .welcome-message {
+        text-align: justify;
+        text-justify: inter-word;
+        text-align-last: left;
+    }
+    
+    .bio p {
+        text-align: justify;
+        text-justify: inter-word;
+        text-align-last: left;
+    }
+}

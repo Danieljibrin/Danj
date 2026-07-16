@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Planner</title>
+    <link rel="stylesheet" href="css/planner.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="planner.html" class="active">Academic Planner</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Academic Planner <span id="taskCounter">(0 tasks)</span></h1>
+        <p class="page-subtitle">Manage your academic tasks efficiently</p>
+
+        <div class="planner-container">
+            <div class="task-input">
+                <input type="text" id="taskInput" placeholder="Enter a new task...">
+                <button id="addTaskBtn" onclick="addTask()">Add Task</button>
+            </div>
+            <ul id="taskList">
+                <!-- Tasks will be dynamically added here -->
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jibrin Okpanachi Daniel. All rights reserved.</p>
+    </footer>
+    
+<script src="script.js"></script>
+</body>
+</html>
